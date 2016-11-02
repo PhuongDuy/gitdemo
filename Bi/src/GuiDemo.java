@@ -1,5 +1,7 @@
 import java.awt.Dimension;
+import java.awt.FlowLayout;
 
+import javax.swing.JButton;
 import javax.swing.JFrame;
 
 /**
@@ -11,7 +13,7 @@ import javax.swing.JFrame;
  *
  */
 public class GuiDemo extends JFrame {
-
+	JButton bntnhap = new JButton("Nhap");
 	/**
 	 * @param args
 	 */
@@ -19,7 +21,13 @@ public class GuiDemo extends JFrame {
 		setTitle("Demo");
 		setSize(500, 500);
 		setLocationRelativeTo(null);
-		setLayout(null);
+		//setLayout(null);
+		add(bntnhap);
+		bntnhap.setBounds(50,50, 100, 30);
+		setLayout( new FlowLayout());
+		for(int i=1;i<=20;i++){
+			add(new JButton(String.valueOf(i)));
+		}
 	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
